@@ -2,7 +2,7 @@ import serial
 import time
 import tkinter as tk
 
-i = input()
+i = input("Enter Arduino COM Port")
 
 arduinoData = serial.Serial(i, 115200)
 time.sleep(3)
