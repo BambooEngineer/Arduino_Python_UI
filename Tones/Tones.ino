@@ -1,4 +1,4 @@
-char incomingByte; // for incoming serial data
+char x; // for incoming serial data
 
 void setup() {
   Serial.begin(115200); // opens serial port
@@ -6,7 +6,9 @@ void setup() {
 }
 
 void loop() {
-  incomingByte = Serial.read();
+  if(Serial.available()>0){
+    x = Serial.read();
+  }
   
   if(incomingByte == 'S'){
     tone(2, 5, 1000);
